@@ -2,7 +2,7 @@ var loop = function(data, n) {
   n = n || 0;
   var dn = data[n] || data[Object.keys(data)[n]];
   if(dn) {  
-    if(Array.isArray(dn) || typeof dn === "object") {
+    if(typeof dn === "object") {
       loop(dn);
     } else {
       console.log(dn);
